@@ -1,0 +1,67 @@
+{
+  "schema": "lrc14.session-theorem-bank.v1",
+  "date": "2026-08-07",
+  "target": "LRC(13): 13 distinct nonzero normalized speeds, threshold 1/14",
+  "full_target_status": "OPEN_IN_SESSION",
+  "external_frontier": {
+    "verified_through_k": 12,
+    "source": "Sungkawichai-Trakulthongchai, arXiv:2604.23906",
+    "mixed_threshold_source": "Jensen, arXiv:2605.27941"
+  },
+  "live": [
+    {"id":"L1","name":"Deleted-runner trap","round":1,"statement":"W_j subset B_{u_j}(1/14)."},
+    {"id":"L2","name":"Pair-overlap budget","round":1,"statement":"sum_{i<j} mu(B_i cap B_j) >= 6/7."},
+    {"id":"L3","name":"Mandatory divisor witnesses","rounds":[2,14],"statement":"For each q=2..14, some u_i is divisible by q."},
+    {"id":"L4","name":"Maximum-anchor resonant probe capacity","rounds":[2,3],"statement":"Under unique maximal q-multiple M=qa, each v<M kills at most two anchor probes and needs gcd(v,q)=1 and v>((14-q)/q)M."},
+    {"id":"L5","name":"Prime multiplicity bound","rounds":[14,16],"statement":"p <= (13-h_p) ceil(p/7); in particular 1 <= h_13 <= 6."},
+    {"id":"L6","name":"Exact 13-slot law","rounds":[6,14,15,16,17,19],"statement":"|S_v(tau)| = 2 - 1_{||v tau|| <= 1/14}; two slots differ by -v^{-1} mod 13."},
+    {"id":"L7","name":"Exact prime-probe law","round":15,"statement":"For prime 7<p<=13, N_{p,v}=2-1_{||v tau|| <= (14-p)/14}."},
+    {"id":"L8","name":"Eleven-resonance saturation","round":15,"statement":"If h_11=7, at least 5 of 6 outsiders have ||v tau||>3/14 at the compressed witness."},
+    {"id":"L9","name":"GCD-sensitive composite capacity","round":15,"statement":"N_{q,v} <= gcd(v,q) ceil(q/(7 gcd(v,q)))."},
+    {"id":"L10","name":"Private-probe theorem","round":16,"statement":"If h_13=6, every outsider has a deleted-runner witness with a physical 13-probe private to it."},
+    {"id":"L11","name":"Universal threshold-matched resonance","rounds":[19,"terminal"],"statement":"On W_h={||a_i tau||>=1/14}, mu(W_h)>=(7-h)/7 and Z_h<=13-2h."},
+    {"id":"L12","name":"Extremal universal saturation","rounds":[17,19],"statement":"For h_13=6, every tau in W is either a 2^6+1 exact partition or a seven-pair cover with exactly one overlap."},
+    {"id":"L13","name":"Strict witness-measure refinement","round":"terminal","statement":"For M=max |a_i|, mu(W_h)>=(7-h)/7+(h-1)/(7M); in particular h=6 gives mu(W)>1/7."},
+    {"id":"L14","name":"Generic forced handoff","round":17,"statement":"At a generic one-runner capacity transition inside W, the created/destroyed slot is exactly the unique overlap."},
+    {"id":"L15","name":"Internal private witnesses","round":19,"statement":"For each internal a_j, exists tau_j with ||a_j tau_j||<1/14 and all other internal ||a_i tau_j||>=1/13."},
+    {"id":"L16","name":"Exact partition polynomial","round":15,"statement":"In a 2^6+1 state, the seven linear/quadratic slot factors multiply to C(X^13-X) over F_13."},
+    {"id":"L17","name":"Exact mixed harmonic correction","round":18,"statement":"mu(B_a(1/13) cap B_v(1/14)) = 2/91 + Bernoulli correction/(AV), with exact residue sign law."},
+    {"id":"L18","name":"Equal-threshold harmonic correction","round":19,"statement":"mu(B_a(1/14) cap B_v(1/14)) = 1/49 + Bernoulli correction/(AV)."}
+  ],
+  "retracted_dependency": {
+    "id": "R-ALLREF",
+    "round_found": 14,
+    "false_edge": "Counterexample for one stationary runner implies counterexample after choosing any other runner as stationary.",
+    "status": "FALSE",
+    "downstream_retracted_rounds": "Target-level machinery from rounds 4-13 that requires changing reference."
+  },
+  "retracted": [
+    "Universal original-runner residue multiplicity",
+    "Global original-speed 3-AP-free theorem",
+    "Unique-13-farthest elimination via changed reference",
+    "Global simultaneous congruence-partner skeleton",
+    "(7,7) original-speed two-fiber target reduction",
+    "Bilateral internal witness / Hall target reduction",
+    "57/2793 bilateral packet target reduction",
+    "49-base invariant target reduction",
+    "Robust-or-critical bilateral target theorem",
+    "Simultaneous all-fiber compression with changed bases"
+  ],
+  "negative_gold": [
+    "Generic pair-overlap alone did not close the wall.",
+    "Bare CRT/divisor coverage does not contradict the mod-13 saturation forms.",
+    "Static residue-partner skeleton can be realized without forcing target closure.",
+    "Base 1/13 separation does not prevent pair distance <1/7.",
+    "Signed Hall cancellation is false at the abstract combinatorial level.",
+    "49-base invariants with independently chosen witnesses do not provide coherence.",
+    "Single Beatty/floor packets have too much local freedom.",
+    "First moments alone do not force outsider collisions on W.",
+    "Neither mixed nor equal-threshold harmonic corrections have universal favorable sign.",
+    "No global handoff winding invariant was proved.",
+    "Essentiality of internal bad sets does not imply disjointness."
+  ],
+  "open_obligations": [
+    {"id":"TS1-6","name":"Terminal saturation family","statement":"For each h=1..6, rule out universal 13-probe outsider coverage on W_h.","effect":"All six imply full LRC(13)."},
+    {"id":"TS6","name":"Extremal terminal saturation lemma","statement":"Rule out h_13=6 saturated 13-cover dynamics throughout W_6.","effect":"Would improve every counterexample to h_13<=5, but would not alone close LRC(13)."}
+  ]
+}

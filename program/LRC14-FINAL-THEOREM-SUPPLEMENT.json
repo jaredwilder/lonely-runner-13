@@ -1,0 +1,26 @@
+{
+  "date": "2026-08-07",
+  "full_lrc13_close": false,
+  "finite_bound_C": 322475487413604782665681,
+  "private_grid_threshold": 1351875719774345695830656516373849784810797518893,
+  "majority_gcd_bounds": {
+    "13": 1,
+    "12": 1,
+    "11": 2,
+    "10": 4,
+    "9": 9,
+    "8": 36,
+    "7": 288
+  },
+  "low_support_budget_bounds": {
+    "1": 322475487413604782665681,
+    "2": 107491829137868260888560,
+    "3": 46067926773372111809383,
+    "4": 21498365827573652177712,
+    "5": 10402435077858218795667,
+    "6": 5118658530374679089931
+  },
+  "singleton_mass_lower_bound": "22/(13*u_13)",
+  "one_private_index_mass_lower_bound": "22/(169*u_13)",
+  "remaining_obligation": "Primitive Non-Tight Extension Lemma"
+}
