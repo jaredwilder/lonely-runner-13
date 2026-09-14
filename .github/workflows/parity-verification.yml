@@ -1,0 +1,16 @@
+name: Parity Lemma Replay
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  parity-lemma:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reconstruct all exact parity certificates
+        run: python verification/verify_parity_lemma.py
