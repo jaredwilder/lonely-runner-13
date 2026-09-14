@@ -1,9 +1,9 @@
 # Lonely Runner with 13 effective speeds — closed large-prime canonical residue class
 
-**Status:** **CLOSED SUBPROBLEM**.  
-**Full LRC(13) / fourteen-runner problem:** **OPEN in this estate**.  
+**Status:** **CLOSED ESTATE SUBPROBLEM**.  
 **Campaign date:** 2026-08-07.  
-**Novelty / priority:** not asserted here; this page publishes the estate theorem and its authority boundary before a dedicated literature court.
+**External status update:** a later 2026-09-02 preprint reports a full computer-assisted proof of `LRC(13)` / fourteen runners; that external 111-gate package has not yet been independently replayed here.  
+**Novelty / priority:** not asserted here; this page publishes the estate theorem and its authority boundary.
 
 ## Theorem
 
@@ -34,6 +34,12 @@ Then there exists a real time `t` such that
 Therefore **no primitive LRC(13) counterexample belongs to this canonical residue class for any prime `p>2366`.**
 
 The campaign identifies this as its strongest closed subproblem.
+
+## Later external full-case claim
+
+On **2026-09-02**, Jaan Allikvere submitted [`arXiv:2609.02604`, *Fourteen lonely runners*](https://arxiv.org/abs/2609.02604). It reports a full computer-assisted proof of the fourteen-runner case by certifying 111 prime gates and supplies a verification package, certificates, and source code linked from arXiv at DOI [`10.5281/zenodo.22066772`](https://doi.org/10.5281/zenodo.22066772).
+
+This does not invalidate or erase the theorem below: the August estate result is an independent closed residue-class theorem with a different proof architecture. It does mean that the old sentence “full LRC(13) is open” is no longer an adequate current-literature status statement. This repository has not yet replayed the external 111-gate computation, so it does not independently certify that later full-case claim.
 
 ---
 
@@ -180,15 +186,19 @@ Exactly two patterns remain:
 
 Those two patterns are exactly the two ways a scalar-canonical congruence modulo `M` can remain scalar-canonical modulo `2M`.
 
-## Machine authority
+## Machine authority — independently refreshed 2026-09-14
 
-The recovered final verification manifest records:
+The historical final verification manifest records:
 
 `verify_lrc14_parity_certificates.py — PASS`
 
-and states that all **8190/8190** nonexceptional certificates were checked using integer arithmetic.
+and states that all **8190/8190** nonexceptional certificates were checked using integer arithmetic. The original companion verifier/CSV bytes were not present in this focused public repository during the September 14 audit.
 
-The complete companion CSV and verifier bytes remain a public-source mirroring target if they are not yet present under `program/master/`; the final manifest and theorem-bank authority are already recovered.
+Rather than relying on that historical receipt, [`verification/verify_parity_lemma.py`](verification/verify_parity_lemma.py) independently reconstructs the certificate set from the theorem statement. It exhausts every advertised candidate `x=n/(2d)` for `1<=d<=26`, uses exact integer comparisons, and then rechecks every reconstructed per-mask witness.
+
+GitHub Actions run `34856943727` passed and recovered **exactly 8190 certified masks**, with missing set precisely `{0,5461}`. It separately verifies that mask `5461` is the pattern `e_i=i (mod 2)`.
+
+Thus the finite parity lemma is no longer supported only by a historical manifest; it has a fresh public independent replay.
 
 ---
 
@@ -342,22 +352,22 @@ Therefore the canonical large-prime residue class is closed.
 
 ---
 
-# Boundary: what remains open
+# Boundary
 
-This theorem does **not** prove the full 13-effective-speed Lonely Runner Conjecture.
+This estate theorem does **not itself** prove the full 13-effective-speed Lonely Runner Conjecture.
 
-The remaining load-bearing obligation in the source program is the full `k=13` modular sieve: show that every candidate modular class is either eliminated directly or driven into a class already closed analytically.
+At the August 7 campaign endpoint, the remaining load-bearing estate obligation was the full `k=13` modular sieve: show that every candidate modular class is either eliminated directly or driven into a class already closed analytically.
 
-The historical campaign explicitly rejects several shortcuts:
+The historical campaign explicitly rejected several shortcuts:
 
 - experimental `raw_log_13` artifacts were not a proof;
 - a generic `p=199` brute-force initial sieve did not finish;
 - directly transplanting the prime-field polynomial argument to `Z_14` was invalid;
 - the repaired route uses `F_13` on twelve coordinates plus a separate thirteenth-coordinate argument.
 
-So the correct public status is:
+The later Allikvere preprint reports a different full computational route through 111 certified prime gates. Until that external package is independently replayed here, the correct estate wording is:
 
-> **large-prime canonical residue class: CLOSED for every prime `p>2366`; full LRC(13): OPEN.**
+> **estate large-prime canonical residue class: CLOSED for every prime `p>2366`; later external full LRC(13) proof: REPORTED, package not yet independently replayed here.**
 
 ## Recovered authority sources
 
@@ -365,4 +375,4 @@ So the correct public status is:
 - `LRC13-FULL-SESSION-MASTER-ASSET-EXTRACTION.md`;
 - `LRC13-FINAL-MASTER-THEOREM-BANK.json`;
 - `LRC13-FINAL-VERIFICATION-MANIFEST.md`;
-- exact parity certificate suite / verifier named above.
+- fresh independent verifier: `verification/verify_parity_lemma.py`.
